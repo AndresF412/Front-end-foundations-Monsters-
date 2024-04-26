@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Front-end foundations: HTML forms</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <section>
+    <h1>Create your own Monster and we will send it to you!</h1>
+    <form>
+      <div class="input-group">
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name" size="30" />
+      </div>
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input id="email" type="email" pattern=".+@example\.com" size="30" required/>
+      </div>
+      <div class="input-group">
+        <label for="form-message">Write your Monsters backstory:</label>
+        <textarea id="form-message" name="message" autofocus="on" required maxlength="200"></textarea>
+      </div>
+      <div class="input-group">
+        <fieldset class="features">
+          <legend>Choose your monster's features:</legend>
+          <div>
+            <input type="checkbox" id="scales" name="scales" checked />
+            <label for="scales"> Scales</label>
+          </div>
+          <div class="input-group">
+            <input type="checkbox" id="horns" name="horns" />
+            <label for="horns">Horns</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="input-group">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </section>
+</body>
+</html>
